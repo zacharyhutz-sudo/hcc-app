@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+import { LayoutDashboard, Users, FolderKanban, Banknote } from 'lucide-astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'Dashboard', icon: LayoutDashboard },
+  { href: '/clients', label: 'Clients', icon: Users },
+  { href: '/projects', label: 'Projects', icon: FolderKanban },
+  { href: '/payments', label: 'Payments', icon: Banknote },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | HCC App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Della+Respira&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Great+Vibes&display=swap" rel="stylesheet">
+  </head>
+  <body class="min-h-screen flex flex-col md:flex-row bg-[#f7faf8]">
+    <nav class="w-full md:w-64 bg-white border-b md:border-b-0 md:border-r border-[#1b2a23]/10 p-6 flex md:flex-col gap-8 md:gap-12">
+      <div class="hidden md:block">
+        <h1 class="text-3xl text-[#1b2a23]">HCC App</h1>
+      </div>
+      <ul class="flex md:flex-col flex-1 justify-around md:justify-start gap-4 md:gap-6">
+        {navItems.map(({ href, label, icon: Icon }) => (
+          <li>
+            <a href={href} class="flex items-center gap-3 text-[#51645c] hover:text-[#7ea493] transition-colors">
+              <Icon size={20} />
+              <span class="hidden md:inline font-['Della_Respira'] text-sm tracking-wide">{label}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <main class="flex-1 p-6 md:p-12 overflow-y-auto">
+      <header class="mb-12">
+        <h2 class="text-4xl md:text-5xl mb-2">{title}</h2>
+        <div class="w-12 h-0.5 bg-[#7ea493]"></div>
+      </header>
+      <slot />
+    </main>
+  </body>
+</html>

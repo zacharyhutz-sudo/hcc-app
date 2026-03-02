@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Payments Dashboard">
+  <div class="mb-8">
+    <div class="flex flex-wrap gap-4">
+      {['Current Year', 'Previous 1Y', 'Previous Month', 'All Time'].map(label => (
+        <button class="px-6 py-2 border border-[#1b2a23]/10 text-sm tracking-wide font-['Della_Respira'] hover:bg-[#7ea493] hover:text-white transition-all">
+          {label}
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+    <div class="bg-white border border-[#1b2a23]/5 p-8 shadow-sm">
+      <p class="text-[#51645c] text-xs uppercase tracking-widest mb-2 font-['Della_Respira']">Total Paid</p>
+      <p class="text-4xl text-[#1b2a23]">/bin/zsh.00</p>
+    </div>
+    <div class="bg-white border border-[#1b2a23]/5 p-8 shadow-sm">
+      <p class="text-[#51645c] text-xs uppercase tracking-widest mb-2 font-['Della_Respira']">Total Pending</p>
+      <p class="text-4xl text-[#1b2a23]">/bin/zsh.00</p>
+    </div>
+    <div class="bg-white border border-[#1b2a23]/5 p-8 shadow-sm">
+      <p class="text-[#51645c] text-xs uppercase tracking-widest mb-2 font-['Della_Respira']">Average per Shoot</p>
+      <p class="text-4xl text-[#1b2a23]">/bin/zsh.00</p>
+    </div>
+  </div>
+
+  <div class="bg-white border border-[#1b2a23]/5 p-8 shadow-sm overflow-x-auto">
+    <h3 class="text-3xl mb-6 text-[#1b2a23]">Recent Transactions</h3>
+    <table class="w-full text-left border-collapse">
+      <thead>
+        <tr class="border-b border-[#1b2a23]/10">
+          <th class="py-4 font-['Della_Respira'] text-sm uppercase tracking-widest text-[#51645c]">Date</th>
+          <th class="py-4 font-['Della_Respira'] text-sm uppercase tracking-widest text-[#51645c]">Client</th>
+          <th class="py-4 font-['Della_Respira'] text-sm uppercase tracking-widest text-[#51645c]">Amount</th>
+          <th class="py-4 font-['Della_Respira'] text-sm uppercase tracking-widest text-[#51645c]">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="4" class="py-8 text-center text-[#51645c] italic">No data found. Sync with Unscripted to see transactions.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</Layout>

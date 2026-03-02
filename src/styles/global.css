@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cream: #f7faf8;
+    --ink: #1b2a23;
+    --green: #7ea493;
+    --muted: #51645c;
+  }
+
+  body {
+    font-family: 'EB Garamond', serif;
+    background-color: var(--cream);
+    color: var(--ink);
+  }
+
+  h1, h2, h3, .script {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+  }
+
+  .subhead {
+    font-family: 'Della Respira', serif;
+  }
+}

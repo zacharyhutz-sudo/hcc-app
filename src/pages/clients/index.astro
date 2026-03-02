@@ -1,0 +1,16 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Clients">
+  <div class="mb-8 flex justify-between items-center">
+    <button class="bg-[#7ea493] text-white px-6 py-2 rounded-sm hover:opacity-90 transition-opacity font-['Della_Respira'] text-sm tracking-wide">Add Client</button>
+  </div>
+
+  <div class="bg-white border border-[#1b2a23]/5 shadow-sm p-8">
+    <h3 class="text-3xl mb-6 text-[#1b2a23]">Client Directory</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <p class="text-[#51645c] italic">No clients found.</p>
+    </div>
+  </div>
+</Layout>

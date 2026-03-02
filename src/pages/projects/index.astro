@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Projects">
+  <div class="mb-8 flex flex-wrap gap-4">
+    {['All', 'In Progress', 'Completed', 'Upcoming'].map(label => (
+      <button class="px-6 py-2 border border-[#1b2a23]/10 text-sm tracking-wide font-['Della_Respira'] hover:bg-[#7ea493] hover:text-white transition-all">
+        {label}
+      </button>
+    ))}
+  </div>
+
+  <div class="grid grid-cols-1 gap-8">
+    <div class="bg-white border border-[#1b2a23]/5 shadow-sm p-8">
+      <h3 class="text-3xl mb-4 text-[#1b2a23]">Active Projects</h3>
+      <p class="text-[#51645c] italic">No active projects found.</p>
+    </div>
+  </div>
+</Layout>
