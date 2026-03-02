@@ -9,10 +9,10 @@ interface Props {
 const { title } = Astro.props;
 
 const navItems = [
-  { href: '/', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/clients', label: 'Clients', icon: Users },
-  { href: '/projects', label: 'Projects', icon: FolderKanban },
-  { href: '/payments', label: 'Payments', icon: Banknote },
+  { href: '/hcc-app/', label: 'Dashboard', icon: LayoutDashboard },
+  { href: '/hcc-app/clients', label: 'Clients', icon: Users },
+  { href: '/hcc-app/projects', label: 'Projects', icon: FolderKanban },
+  { href: '/hcc-app/payments', label: 'Payments', icon: Banknote },
 ];
 ---
 
@@ -21,7 +21,7 @@ const navItems = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/hcc-app/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} | HCC App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
