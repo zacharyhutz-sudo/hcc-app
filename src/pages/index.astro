@@ -3,60 +3,17 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Dashboard">
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-    <div class="lg:col-span-2 space-y-12">
-      <section>
-        <h3 class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#1b2a23]/50 mb-8">Quick Actions</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a href="/hcc-app/projects" class="group relative bg-[#1b2a23] text-white p-8 overflow-hidden">
-            <div class="relative z-10">
-              <span class="block text-[10px] font-bold uppercase tracking-widest opacity-60 mb-2">Workflow</span>
-              <span class="text-2xl font-['EB_Garamond'] italic">Manage Projects</span>
-            </div>
-            <div class="absolute inset-0 bg-[#7ea493] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
-          </a>
-          <a href="/hcc-app/payments" class="group relative border border-[#1b2a23] p-8 overflow-hidden">
-            <div class="relative z-10">
-              <span class="block text-[10px] font-bold uppercase tracking-widest text-[#1b2a23]/60 mb-2">Finance</span>
-              <span class="text-2xl font-['EB_Garamond'] italic text-[#1b2a23]">View Payments</span>
-            </div>
-            <div class="absolute inset-0 bg-[#1b2a23] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
-            <style>
-              .group:hover span { color: white !important; }
-            </style>
-          </a>
-        </div>
-      </section>
-
-      <section>
-        <h3 class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#1b2a23]/50 mb-8">Active Stats</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          <div>
-            <span class="block text-4xl font-['EB_Garamond'] text-[#1b2a23]">12</span>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-[#1b2a23]/40">Active Projects</span>
-          </div>
-          <div>
-            <span class="block text-4xl font-['EB_Garamond'] text-[#1b2a23]">$4.2k</span>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-[#1b2a23]/40">Pending Invoices</span>
-          </div>
-          <div>
-            <span class="block text-4xl font-['EB_Garamond'] text-[#1b2a23]">3</span>
-            <span class="text-[10px] font-bold uppercase tracking-widest text-[#1b2a23]/40">New Leads</span>
-          </div>
-        </div>
-      </section>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-white border border-[#1b2a23]/5 p-8 shadow-sm">
+      <h3 class="text-3xl mb-4 text-[#1b2a23]">Quick Actions</h3>
+      <ul class="flex flex-col gap-4">
+        <li><a href="/projects" class="bg-[#7ea493] text-white px-6 py-2 rounded-sm hover:opacity-90 transition-opacity block text-center">Manage Projects</a></li>
+        <li><a href="/payments" class="bg-[#1b2a23] text-white px-6 py-2 rounded-sm hover:opacity-90 transition-opacity block text-center">View Payments Dashboard</a></li>
+      </ul>
     </div>
-
-    <aside class="space-y-12">
-      <section class="bg-white border border-[#1b2a23]/5 p-8 shadow-sm">
-        <h3 class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#1b2a23]/50 mb-6">Recent Activity</h3>
-        <div class="space-y-6">
-          <div class="border-l-2 border-[#7ea493] pl-4">
-            <p class="text-sm font-['EB_Garamond'] italic">Waiting for Unscripted sync...</p>
-            <span class="text-[9px] uppercase tracking-widest text-[#1b2a23]/40">Just now</span>
-          </div>
-        </div>
-      </aside>
+    <div class="bg-white border border-[#1b2a23]/5 p-8 shadow-sm">
+      <h3 class="text-3xl mb-4 text-[#1b2a23]">Recent Activity</h3>
+      <p class="text-[#51645c]">Waiting for Unscripted data sync...</p>
     </div>
   </div>
 </Layout>
