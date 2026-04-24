@@ -3,18 +3,24 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="Projects">
-  <div class="mb-8 flex flex-wrap gap-4">
+  <div class="mb-12 flex flex-wrap gap-4">
     {['All', 'In Progress', 'Completed', 'Upcoming'].map(label => (
-      <button class="px-6 py-2 border border-[#1b2a23]/10 text-sm tracking-wide font-['Della_Respira'] hover:bg-[#7ea493] hover:text-white transition-all">
+      <button class="px-6 py-2 border border-[#1b2a23] text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-[#1b2a23] hover:text-white transition-all cursor-pointer">
         {label}
       </button>
     ))}
   </div>
 
-  <div class="grid grid-cols-1 gap-8">
-    <div class="bg-white border border-[#1b2a23]/5 shadow-sm p-8">
-      <h3 class="text-3xl mb-4 text-[#1b2a23]">Active Projects</h3>
-      <p class="text-[#51645c] italic">No active projects found.</p>
+  <div class="grid grid-cols-1 gap-12">
+    <div class="bg-white border border-[#1b2a23]/5 shadow-sm p-12">
+      <header class="mb-8 flex justify-between items-end border-b border-[#1b2a23]/5 pb-8">
+        <h3 class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#1b2a23]/50">Active Projects</h3>
+        <span class="text-[10px] font-bold uppercase tracking-widest text-[#1b2a23]/30">Sorted by Date</span>
+      </header>
+      <div class="flex flex-col items-center justify-center py-20">
+        <p class="text-[#1b2a23]/30 font-['EB_Garamond'] italic text-2xl">No active projects found.</p>
+        <p class="text-[10px] font-bold uppercase tracking-widest text-[#1b2a23]/20 mt-4">Start a new project from the client directory</p>
+      </div>
     </div>
   </div>
 </Layout>

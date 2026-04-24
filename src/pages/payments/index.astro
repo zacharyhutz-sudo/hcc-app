@@ -2,11 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Payments Dashboard">
-  <div class="mb-8">
+<Layout title="Payments">
+  <div class="mb-12">
     <div class="flex flex-wrap gap-4">
       {['Current Year', 'Previous 1Y', 'Previous Month', 'All Time'].map(label => (
-        <button class="px-6 py-2 border border-[#1b2a23]/10 text-sm tracking-wide font-['Della_Respira'] hover:bg-[#7ea493] hover:text-white transition-all">
+        <button class="px-6 py-2 border border-[#1b2a23] text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-[#1b2a23] hover:text-white transition-all cursor-pointer">
           {label}
         </button>
       ))}
@@ -15,33 +15,38 @@ import Layout from '../../layouts/Layout.astro';
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
     <div class="bg-white border border-[#1b2a23]/5 p-8 shadow-sm">
-      <p class="text-[#51645c] text-xs uppercase tracking-widest mb-2 font-['Della_Respira']">Total Paid</p>
-      <p class="text-4xl text-[#1b2a23]">/bin/zsh.00</p>
+      <p class="text-[#1b2a23]/40 text-[10px] font-bold uppercase tracking-widest mb-4">Total Paid</p>
+      <p class="text-5xl text-[#1b2a23] font-['EB_Garamond']">$0.00</p>
     </div>
     <div class="bg-white border border-[#1b2a23]/5 p-8 shadow-sm">
-      <p class="text-[#51645c] text-xs uppercase tracking-widest mb-2 font-['Della_Respira']">Total Pending</p>
-      <p class="text-4xl text-[#1b2a23]">/bin/zsh.00</p>
+      <p class="text-[#1b2a23]/40 text-[10px] font-bold uppercase tracking-widest mb-4">Total Pending</p>
+      <p class="text-5xl text-[#1b2a23] font-['EB_Garamond']">$0.00</p>
     </div>
     <div class="bg-white border border-[#1b2a23]/5 p-8 shadow-sm">
-      <p class="text-[#51645c] text-xs uppercase tracking-widest mb-2 font-['Della_Respira']">Average per Shoot</p>
-      <p class="text-4xl text-[#1b2a23]">/bin/zsh.00</p>
+      <p class="text-[#1b2a23]/40 text-[10px] font-bold uppercase tracking-widest mb-4">Average/Shoot</p>
+      <p class="text-5xl text-[#1b2a23] font-['EB_Garamond']">$0.00</p>
     </div>
   </div>
 
-  <div class="bg-white border border-[#1b2a23]/5 p-8 shadow-sm overflow-x-auto">
-    <h3 class="text-3xl mb-6 text-[#1b2a23]">Recent Transactions</h3>
+  <div class="bg-white border border-[#1b2a23]/5 p-12 shadow-sm overflow-x-auto">
+    <header class="mb-12 border-b border-[#1b2a23]/5 pb-8">
+        <h3 class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#1b2a23]/50">Recent Transactions</h3>
+    </header>
     <table class="w-full text-left border-collapse">
       <thead>
         <tr class="border-b border-[#1b2a23]/10">
-          <th class="py-4 font-['Della_Respira'] text-sm uppercase tracking-widest text-[#51645c]">Date</th>
-          <th class="py-4 font-['Della_Respira'] text-sm uppercase tracking-widest text-[#51645c]">Client</th>
-          <th class="py-4 font-['Della_Respira'] text-sm uppercase tracking-widest text-[#51645c]">Amount</th>
-          <th class="py-4 font-['Della_Respira'] text-sm uppercase tracking-widest text-[#51645c]">Status</th>
+          <th class="py-4 font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest text-[#1b2a23]/40">Date</th>
+          <th class="py-4 font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest text-[#1b2a23]/40">Client</th>
+          <th class="py-4 font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest text-[#1b2a23]/40">Amount</th>
+          <th class="py-4 font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-widest text-[#1b2a23]/40 text-right">Status</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td colspan="4" class="py-8 text-center text-[#51645c] italic">No data found. Sync with Unscripted to see transactions.</td>
+          <td colspan="4" class="py-20 text-center">
+            <p class="text-[#1b2a23]/30 font-['EB_Garamond'] italic text-xl">No transactions found.</p>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-[#1b2a23]/20 mt-2 block">Connect to Unscripted or Stripe</span>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -49,12 +54,12 @@ import Layout from '../../layouts/Layout.astro';
 </Layout>
 
 <script>
-  // Basic toggle logic for the demo
+  // Basic toggle logic
   const buttons = document.querySelectorAll('button');
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('bg-[#7ea493]', 'text-white'));
-      btn.classList.add('bg-[#7ea493]', 'text-white');
+      buttons.forEach(b => b.classList.remove('bg-[#1b2a23]', 'text-white'));
+      btn.classList.add('bg-[#1b2a23]', 'text-white');
     });
   });
 </script>

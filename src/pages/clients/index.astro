@@ -3,14 +3,21 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="Clients">
-  <div class="mb-8 flex justify-between items-center">
-    <button class="bg-[#7ea493] text-white px-6 py-2 rounded-sm hover:opacity-90 transition-opacity font-['Della_Respira'] text-sm tracking-wide">Add Client</button>
+  <div class="mb-12 flex justify-end">
+    <button class="bg-[#1b2a23] text-white px-8 py-3 font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-[#7ea493] transition-colors cursor-pointer">
+      + New Client
+    </button>
   </div>
 
-  <div class="bg-white border border-[#1b2a23]/5 shadow-sm p-8">
-    <h3 class="text-3xl mb-6 text-[#1b2a23]">Client Directory</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <p class="text-[#51645c] italic">No clients found.</p>
+  <div class="bg-white border border-[#1b2a23]/5 shadow-sm p-12">
+    <header class="mb-12 border-b border-[#1b2a23]/5 pb-8">
+      <h3 class="font-['Plus_Jakarta_Sans'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#1b2a23]/50">Directory</h3>
+    </header>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div class="border border-[#1b2a23]/5 p-8 flex flex-col items-center justify-center min-h-[200px] border-dashed">
+        <p class="text-[#1b2a23]/30 font-['EB_Garamond'] italic text-xl">No clients found.</p>
+        <span class="text-[10px] font-bold uppercase tracking-widest text-[#1b2a23]/20 mt-2">Sync with Unscripted required</span>
+      </div>
     </div>
   </div>
 </Layout>
